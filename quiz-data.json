@@ -1,0 +1,546 @@
+{
+  "time": 2400,
+  "questions": [
+    {
+      "question": "What will be the output of this print statement?",
+      "code_snippet": "print('Hello' + 'World')",
+      "choice1": "Hello World",
+      "choice2": "HelloWorld",
+      "choice3": "Hello+World",
+      "choice4": "Error",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will be the type of the input?",
+      "code_snippet": "x = input('Enter a number: ')\nprint(type(x))",
+      "choice1": "&lt;class 'int'&gt;",
+      "choice2": "&lt;class 'str'&gt;",
+      "choice3": "&lt;class 'float'&gt;",
+      "choice4": "Depends on input",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will be the output of this code?",
+      "code_snippet": "x = 10\ny = 3\nprint(x // y)",
+      "choice1": "3.33",
+      "choice2": "3",
+      "choice3": "4",
+      "choice4": "Error",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "Guess the output of this code.",
+      "code_snippet": "a = 7.0\nprint(type(a))",
+      "choice1": "&lt;class 'float'&gt;",
+      "choice2": "&lt;class 'int'&gt;",
+      "choice3": "&lt;class 'str'&gt;",
+      "choice4": "&lt;class 'bool'&gt;",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is printed by the following?",
+      "code_snippet": "print(bool(0))",
+      "choice1": "True",
+      "choice2": "False",
+      "choice3": "0",
+      "choice4": "Error",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will be the result of this code?",
+      "code_snippet": "a = '5'\nb = 2\nprint(a * b)",
+      "choice1": "10",
+      "choice2": "55555",
+      "choice3": "TypeError",
+      "choice4": "52",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will this code print?",
+      "code_snippet": "print(2 + 3 * 4)",
+      "choice1": "20",
+      "choice2": "14",
+      "choice3": "24",
+      "choice4": "9",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What is the result of this expression?",
+      "code_snippet": "print(9 % 2)",
+      "choice1": "4",
+      "choice2": "1",
+      "choice3": "0",
+      "choice4": "2",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What is the output type of this expression?",
+      "code_snippet": "x = 5 / 2\nprint(type(x))",
+      "choice1": "&lt;class 'float'&gt;",
+      "choice2": "&lt;class 'int'&gt;",
+      "choice3": "&lt;class 'bool'&gt;",
+      "choice4": "&lt;class 'str'&gt;",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What happens when this code is run?",
+      "code_snippet": "print('5' + str(3))",
+      "choice1": "8",
+      "choice2": "53",
+      "choice3": "Error",
+      "choice4": "5 + 3",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What is printed?",
+      "code_snippet": "print('5' + 3)",
+      "choice1": "53",
+      "choice2": "8",
+      "choice3": "TypeError",
+      "choice4": "Error",
+      "correctAnswer": "choice3"
+    },
+    {
+      "question": "Guess the output of this expression.",
+      "code_snippet": "print(True + False)",
+      "choice1": "1",
+      "choice2": "0",
+      "choice3": "TrueFalse",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will this print?",
+      "code_snippet": "a = 'Python'\nprint(a[0])",
+      "choice1": "P",
+      "choice2": "y",
+      "choice3": "n",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will this return?",
+      "code_snippet": "x = 2.5\nprint(int(x))",
+      "choice1": "2",
+      "choice2": "2.5",
+      "choice3": "3",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What does this code do?",
+      "code_snippet": "x = '10'\ny = int(x)\nprint(x + str(y))",
+      "choice1": "1010",
+      "choice2": "20",
+      "choice3": "TypeError",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+
+    {
+      "question": "What is the output of this if-else statement?",
+      "code_snippet": "x = 10\nif x &gt; 5:\n    print('Greater')\nelse:\n    print('Smaller')",
+      "choice1": "Greater",
+      "choice2": "Smaller",
+      "choice3": "None",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which relational operator checks for equality?",
+      "code_snippet": "",
+      "choice1": "=",
+      "choice2": "==",
+      "choice3": "!=",
+      "choice4": "&lt;=",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will be printed?",
+      "code_snippet": "x = 5\ny = 10\nif x &lt; 10 and y &gt; 5:\n    print('Valid')\nelse:\n    print('Invalid')",
+      "choice1": "Valid",
+      "choice2": "Invalid",
+      "choice3": "Error",
+      "choice4": "None",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Guess the output of the following code.",
+      "code_snippet": "x = 3\nif x &lt; 2:\n    print('Low')\nelif x &lt; 5:\n    print('Mid')\nelse:\n    print('High')",
+      "choice1": "Low",
+      "choice2": "Mid",
+      "choice3": "High",
+      "choice4": "None",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What is the result of this expression?",
+      "code_snippet": "not (True and False)",
+      "choice1": "True",
+      "choice2": "False",
+      "choice3": "Error",
+      "choice4": "None",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What does this code print?",
+      "code_snippet": "x = 10\ny = 5\nif x &gt; 5:\n    if y &lt; 10:\n        print('Nested True')\n    else:\n        print('Inner False')\nelse:\n    print('Outer False')",
+      "choice1": "Nested True",
+      "choice2": "Inner False",
+      "choice3": "Outer False",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which of the following is a valid condition using `or`?",
+      "code_snippet": "",
+      "choice1": "if x &gt; 0 or &lt; 10:",
+      "choice2": "if (x &gt; 0) or (x &lt; 10):",
+      "choice3": "if x &gt; 0 or and x &lt; 10:",
+      "choice4": "if x &gt; 0 || x &lt; 10:",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will this print?",
+      "code_snippet": "a = 8\nif a % 2 == 0:\n    print('Even')\nelse:\n    print('Odd')",
+      "choice1": "Even",
+      "choice2": "Odd",
+      "choice3": "None",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which output is correct?",
+      "code_snippet": "x = 7\nif x &gt; 10:\n    print('A')\nelif x &gt; 5:\n    print('B')\nelif x &gt; 3:\n    print('C')",
+      "choice1": "A",
+      "choice2": "B",
+      "choice3": "C",
+      "choice4": "None",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What does this code print?",
+      "code_snippet": "x = 4\nif x &gt; 2:\n    if x &lt; 6:\n        print('Between 2 and 6')",
+      "choice1": "Between 2 and 6",
+      "choice2": "Error",
+      "choice3": "None",
+      "choice4": "2 and 6",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will be the output of this list slice?",
+      "code_snippet": "lst = [1, 2, 3, 4, 5]\nprint(lst[1:4])",
+      "choice1": "[2, 3, 4]",
+      "choice2": "[1, 2, 3]",
+      "choice3": "[1, 4]",
+      "choice4": "[2, 4, 5]",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the result of this string slice?",
+      "code_snippet": "text = 'Python'\nprint(text[0:3])",
+      "choice1": "Pyt",
+      "choice2": "hon",
+      "choice3": "tho",
+      "choice4": "yth",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the output?",
+      "code_snippet": "a = [10, 20, 30, 40, 50]\nprint(a[:3])",
+      "choice1": "[10, 20, 30]",
+      "choice2": "[40, 50]",
+      "choice3": "[30, 40, 50]",
+      "choice4": "[10, 30]",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What does this code print?",
+      "code_snippet": "name = 'Python'\nprint(name[::-1])",
+      "choice1": "nohtyP",
+      "choice2": "Python",
+      "choice3": "nothyP",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the output?",
+      "code_snippet": "s = 'Hello World'\nprint(s.split())",
+      "choice1": "['Hello', 'World']",
+      "choice2": "Hello World",
+      "choice3": "['Hello World']",
+      "choice4": "{'Hello', 'World'}",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will be printed?",
+      "code_snippet": "lst = [1, 2, 3, 4, 5]\nprint(lst[-3:])",
+      "choice1": "[3, 4, 5]",
+      "choice2": "[1, 2, 3]",
+      "choice3": "[5, 4, 3]",
+      "choice4": "[2, 3]",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the result of this code?",
+      "code_snippet": "text = 'banana'\nprint(text.count('a'))",
+      "choice1": "3",
+      "choice2": "2",
+      "choice3": "1",
+      "choice4": "0",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which string method capitalizes the first letter?",
+      "code_snippet": "name = 'python'\nprint(name.capitalize())",
+      "choice1": "Python",
+      "choice2": "PYTHON",
+      "choice3": "python",
+      "choice4": "pYTHON",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the result of this list slice?",
+      "code_snippet": "nums = [0, 1, 2, 3, 4, 5]\nprint(nums[::2])",
+      "choice1": "[0, 2, 4]",
+      "choice2": "[1, 3, 5]",
+      "choice3": "[2, 4, 6]",
+      "choice4": "[0, 1, 2]",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which method returns index of a substring?",
+      "code_snippet": "text = 'hello'\nprint(text.index('e'))",
+      "choice1": "1",
+      "choice2": "0",
+      "choice3": "2",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the output of this slice?",
+      "code_snippet": "letters = ['a', 'b', 'c', 'd']\nprint(letters[1:3])",
+      "choice1": "['b', 'c']",
+      "choice2": "['a', 'b']",
+      "choice3": "['c', 'd']",
+      "choice4": "['b', 'd']",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which output is correct?",
+      "code_snippet": "msg = 'Python Programming'\nprint(msg[7:18])",
+      "choice1": "Programming",
+      "choice2": "Python Progr",
+      "choice3": "gramming",
+      "choice4": "thon Programmi",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will be the output of this method?",
+      "code_snippet": "s = 'HELLO'\nprint(s.lower())",
+      "choice1": "hello",
+      "choice2": "HELLO",
+      "choice3": "Hello",
+      "choice4": "error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What does this code return?",
+      "code_snippet": "colors = ['red', 'blue', 'green']\nprint(colors.index('blue'))",
+      "choice1": "1",
+      "choice2": "2",
+      "choice3": "0",
+      "choice4": "blue",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What does this slice do?",
+      "code_snippet": "nums = [10, 20, 30, 40, 50]\nprint(nums[1:-1])",
+      "choice1": "[20, 30, 40]",
+      "choice2": "[10, 20, 30]",
+      "choice3": "[20, 30]",
+      "choice4": "[10, 20, 30, 40]",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will be the data type of `x`?",
+      "code_snippet": "x = 7.5",
+      "choice1": "int",
+      "choice2": "float",
+      "choice3": "str",
+      "choice4": "bool",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will this print?",
+      "code_snippet": "x = 5\ny = 2\nprint(x % y)",
+      "choice1": "2",
+      "choice2": "1",
+      "choice3": "0",
+      "choice4": "2.5",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What is the result?",
+      "code_snippet": "x = 10\ny = 20\nif x &lt; y:\n    print('X is smaller')",
+      "choice1": "X is smaller",
+      "choice2": "Y is smaller",
+      "choice3": "Nothing",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Guess the output.",
+      "code_snippet": "a = 4\nb = 4\nif a == b:\n    print('Equal')",
+      "choice1": "Equal",
+      "choice2": "Not Equal",
+      "choice3": "None",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which statement will return True?",
+      "code_snippet": "x = 8\ny = 12",
+      "choice1": "x &gt; 10 or y &gt; 10",
+      "choice2": "x &gt; 10 and y &gt; 10",
+      "choice3": "x &lt; 5 and y &lt; 5",
+      "choice4": "x == y",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the output?",
+      "code_snippet": "name = 'python'\nprint(name.upper())",
+      "choice1": "PYTHON",
+      "choice2": "Python",
+      "choice3": "python",
+      "choice4": "pYTHON",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will this slice return?",
+      "code_snippet": "s = 'abcdefg'\nprint(s[1:4])",
+      "choice1": "bcd",
+      "choice2": "abc",
+      "choice3": "def",
+      "choice4": "bcde",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What does this method do?",
+      "code_snippet": "colors = ['red', 'green', 'blue']\nprint(colors.index('green'))",
+      "choice1": "1",
+      "choice2": "green",
+      "choice3": "2",
+      "choice4": "0",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which of the following is a valid variable name?",
+      "code_snippet": "",
+      "choice1": "1value",
+      "choice2": "_value",
+      "choice3": "value-1",
+      "choice4": "None of these",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will this code print?",
+      "code_snippet": "x = 15\nif x % 3 == 0:\n    print('Divisible by 3')",
+      "choice1": "Divisible by 3",
+      "choice2": "Not divisible",
+      "choice3": "15",
+      "choice4": "3",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will this return?",
+      "code_snippet": "s = 'banana'\nprint(s.count('a'))",
+      "choice1": "3",
+      "choice2": "2",
+      "choice3": "1",
+      "choice4": "0",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which condition is True?",
+      "code_snippet": "x = 5\ny = 15\nz = 10\nprint(x &lt; z &lt; y)",
+      "choice1": "True",
+      "choice2": "False",
+      "choice3": "Error",
+      "choice4": "None",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Guess the result of the slice.",
+      "code_snippet": "lst = [10, 20, 30, 40, 50]\nprint(lst[::2])",
+      "choice1": "[10, 30, 50]",
+      "choice2": "[20, 40]",
+      "choice3": "[10, 20, 30]",
+      "choice4": "[50, 30, 10]",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which method splits a string by spaces?",
+      "code_snippet": "text = 'Hello World'\nprint(text.split())",
+      "choice1": "['Hello', 'World']",
+      "choice2": "HelloWorld",
+      "choice3": "['Hello World']",
+      "choice4": "None",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will this output?",
+      "code_snippet": "x = 10\ny = 20\nif x &gt; y:\n    print('X')\nelif x == y:\n    print('Equal')\nelse:\n    print('Y')",
+      "choice1": "X",
+      "choice2": "Y",
+      "choice3": "Equal",
+      "choice4": "None",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What is the output?",
+      "code_snippet": "x = 7\nif not x &lt; 5:\n    print('Pass')",
+      "choice1": "Pass",
+      "choice2": "Fail",
+      "choice3": "Nothing",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is printed?",
+      "code_snippet": "s = 'hello'\nprint(s.capitalize())",
+      "choice1": "Hello",
+      "choice2": "hello",
+      "choice3": "HELLO",
+      "choice4": "hELLO",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Which operator gives remainder?",
+      "code_snippet": "",
+      "choice1": "%",
+      "choice2": "/",
+      "choice3": "//",
+      "choice4": "*",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the output of this logical operation?",
+      "code_snippet": "x = True\ny = False\nprint(x and y)",
+      "choice1": "False",
+      "choice2": "True",
+      "choice3": "Error",
+      "choice4": "None",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What does this return?",
+      "code_snippet": "nums = [1, 2, 3, 4]\nprint(nums[-2:])",
+      "choice1": "[3, 4]",
+      "choice2": "[2, 3]",
+      "choice3": "[1, 2]",
+      "choice4": "[4]",
+      "correctAnswer": "choice1"
+    }
+  ]
+}

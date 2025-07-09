@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: #333;
+    }
+    pre {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .choices label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+    .correct {
+      background-color: #d4edda;
+    }
+    .incorrect {
+      background-color: #f8d7da;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 1rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .timer {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+    .question-number {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Python Quiz</h1>
+  <div class="timer" id="timer">Time Left: --:--</div>
+  <div id="quiz-container">
+    <div class="question-number" id="question-number"></div>
+    <div id="question-container"></div>
+    <div class="choices" id="choices"></div>
+    <button id="submit-btn">Submit Answer</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    let questions = [];
+    let timeLimit = 0;
+    let currentQuestion = 0;
+    let score = 0;
+    let timerInterval;
+    let userAnswers = [];
+
+    async function loadQuizData() {
+      const response = await fetch("quiz-data.json");
+      const data = await response.json();
+      questions = data.questions;
+      timeLimit = data.time; // time in seconds
+      startTimer(timeLimit);
+      loadQuestion();
+    }
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      document.getElementById("question-number").textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+      document.getElementById("question-container").innerHTML = `
+        <h3>${q.question}</h3>
+        <pre>${q.code_snippet}</pre>
+      `;
+      document.getElementById("choices").innerHTML = "";
+      for (let i = 1; i <= 4; i++) {
+        const choice = q[`choice${i}`];
+        document.getElementById("choices").innerHTML += `
+          <label><input type="radio" name="choice" value="choice${i}"> ${choice}</label>
+        `;
+      }
+    }
+
+    document.getElementById("submit-btn").addEventListener("click", () => {
+      const selected = document.querySelector("input[name='choice']:checked");
+      const resultDiv = document.getElementById("result");
+      if (!selected) {
+        resultDiv.textContent = "Please select an answer.";
+        return;
+      }
+      const answer = selected.value;
+      userAnswers.push(answer);
+      if (answer === questions[currentQuestion].correctAnswer) {
+        // resultDiv.textContent = "Correct!";
+        score++;
+      }
+    //    else {
+        // resultDiv.textContent = `Wrong! Correct answer was: ${questions[currentQuestion][questions[currentQuestion].correctAnswer]}`;
+    //   }
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        
+          resultDiv.textContent = "";
+          loadQuestion();
+        
+      } else {
+        endQuiz();
+      }
+    });
+
+    function startTimer(seconds) {
+      const timerDisplay = document.getElementById("timer");
+      function updateDisplay() {
+        const min = Math.floor(seconds / 60);
+        const sec = seconds % 60;
+        timerDisplay.textContent = `Time Left: ${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+      }
+      updateDisplay();
+      timerInterval = setInterval(() => {
+        seconds--;
+        if (seconds < 0) {
+          clearInterval(timerInterval);
+          endQuiz();
+        } else {
+          updateDisplay();
+        }
+      }, 1000);
+    }
+
+    function endQuiz() {
+      clearInterval(timerInterval);
+      let reviewHtml = `<h2>Your Score: ${score} / ${questions.length}</h2>`;
+      questions.forEach((q, index) => {
+        reviewHtml += `<div style="margin-top: 1rem;">
+          <strong>Q${index + 1}: ${q.question}</strong>
+          <pre>${q.code_snippet}</pre>
+          <ul style="list-style-type: none; padding-left: 0;">`;
+        for (let i = 1; i <= 4; i++) {
+          const choiceKey = `choice${i}`;
+          const userAnswer = userAnswers[index];
+          const isCorrect = q.correctAnswer === choiceKey;
+          const isUserChoice = userAnswer === choiceKey;
+          const className = isCorrect ? 'correct' : (isUserChoice ? 'incorrect' : '');
+          reviewHtml += `<li class="${className}" style="padding: 5px; border-radius: 5px;">${q[choiceKey]}</li>`;
+        }
+        reviewHtml += `</ul></div>`;
+      });
+      document.getElementById("quiz-container").innerHTML = reviewHtml;
+    }
+
+    loadQuizData();
+  </script>
+</body>
+</html>
