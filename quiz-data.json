@@ -50,7 +50,7 @@
       "question": "What will be the result of this code?",
       "code_snippet": "a = '5'\nb = 2\nprint(a * b)",
       "choice1": "10",
-      "choice2": "55555",
+      "choice2": "55",
       "choice3": "TypeError",
       "choice4": "52",
       "correctAnswer": "choice2"
@@ -541,6 +541,97 @@
       "choice3": "[1, 2]",
       "choice4": "[4]",
       "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will be the output of this code?",
+      "code_snippet": "list1 = [20, 30, 50]\nlist2 = list1\nlist1[0] = 100\nprint(list2)",
+      "choice1": "[100, 30, 50]",
+      "choice2": "[20, 30, 50]",
+      "choice3": "[100, 100, 100]",
+      "choice4": "Error",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What will be the output of this code?",
+      "code_snippet": "list1 = [10, 20, 30]\nlist2 = list1[:]\nlist1[0] = 100\nprint(list2)",
+      "choice1": "[100, 20, 30]",
+      "choice2": "[10, 20, 30]",
+      "choice3": "[100, 100, 100]",
+      "choice4": "[0, 20, 30]",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will be the output of this code?",
+      "code_snippet": "list1 = [10, 20, 30]\nlist2 = list1.copy()\nlist1[0] = 100\nprint(list2)",
+      "choice1": "[100, 20, 30]",
+      "choice2": "[10, 20, 30]",
+      "choice3": "[100, 100, 100]",
+      "choice4": "[0, 20, 30]",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will be the output of this code?",
+      "code_snippet": "x = '  '\nif x:\n    print('Yes')\nelse:\n    print('No')",
+      "choice1": "Yes",
+      "choice2": "No",
+      "choice3": "Error",
+      "choice4": "None",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "What is the result of this code?",
+      "code_snippet": "num = 0\nif num:\n    print('Truthy')\nelse:\n    print('Falsy')",
+      "choice1": "Truthy",
+      "choice2": "Falsy",
+      "choice3": "0",
+      "choice4": "Error",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "Which value is considered truthy in Python?",
+      "code_snippet": "",
+      "choice1": "[]",
+      "choice2": "\"hello\"",
+      "choice3": "0",
+      "choice4": "None",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What is the output of this expression following PEMDAS?",
+      "code_snippet": "result = 5 + 2 * 3\nprint(result)",
+      "choice1": "21",
+      "choice2": "11",
+      "choice3": "15",
+      "choice4": "7",
+      "correctAnswer": "choice2"
+    },
+    {
+      "question": "What will this print?",
+      "code_snippet": "value = (4 + 3) * 2\nprint(value)",
+      "choice1": "14",
+      "choice2": "10",
+      "choice3": "11",
+      "choice4": "8",
+      "correctAnswer": "choice1"
+    },
+    {
+      "question": "Evaluate the expression using PEMDAS.",
+      "code_snippet": "output = 2 + 3 * 2 ** 2\nprint(output)",
+      "choice1": "20",
+      "choice2": "16",
+      "choice3": "14",
+      "choice4": "10",
+      "correctAnswer": "choice3"
+    },
+    {
+      "question": "Which of the following is NOT a falsy value in Python?",
+      "code_snippet": "",
+      "choice1": "[]",
+      "choice2": "''",
+      "choice3": "0",
+      "choice4": "'hello'",
+      "correctAnswer": "choice4"
     }
-  ]
+  ],
+  "feedback": ["fiest choice is the answer for the majority of the question"]
 }
